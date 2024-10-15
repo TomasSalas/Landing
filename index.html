@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakin-Tec - Software & BigData</title>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography,aspect-ratio,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rakin-orange': '#FF8C00',
+            'rakin-gray': '#4A4A4A',
+          }
+        }
+      }
+    }
+  </script>
+  <script type="module" src="./index.js"></script>
+  <style>
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation-duration: 0.5s;
+    }
+  </style>
+</head>
+
+<body class="select-none overscroll-none">
+  <header class="bg-white shadow-md fixed w-full z-10 -mt-2">
+    <nav class=" px-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="/assets/logo_rakin.png" alt="Rakin-Tec Logo" class="h-16">
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#inicio" class="text-rakin-gray hover:bg-rakin-orange p-2 rounded-lg nav-link">Inicio</a>
+          <a href="#servicios" class="text-rakin-gray hover:bg-rakin-orange p-2 rounded-lg nav-link">Servicios</a>
+          <a href="#sobre-nosotros" class="text-rakin-gray hover:bg-rakin-orange p-2 rounded-lg nav-link">Sobre
+            Nosotros</a>
+          <a href="#contacto" class="text-rakin-gray hover:bg-rakin-orange p-2 rounded-lg nav-link">Contacto</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-rakin-gray hover:text-rakin-orange">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden transition-all duration-300 ease-in-out max-h-0 overflow-hidden">
+        <a href="#inicio"
+          class="block py-2 text-rakin-gray hover:hover:bg-rakin-orange p-2 rounded-lg nav-link">Inicio</a>
+        <a href="#servicios"
+          class="block py-2 text-rakin-gray hover:hover:bg-rakin-orange p-2 rounded-lg nav-link">Servicios</a>
+        <a href="#sobre-nosotros"
+          class="block py-2 text-rakin-gray hover:hover:bg-rakin-orange p-2 rounded-lg nav-link">Sobre Nosotros</a>
+        <a href="#contacto"
+          class="block py-2 text-rakin-gray hover:hover:bg-rakin-orange p-2 mb-2 rounded-lg nav-link">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio"
+      class="mt-2 mx-auto px-6 py-10 h-screen flex flex-col justify-center bg-gray-100 rounded-b-[40px]">
+      <div class="flex flex-col md:flex-row w-full justify-center items-center gap-8 mt-8">
+        <div class="flex flex-col w-full md:w-full text-center">
+          <h1 class="text-5xl font-bold mb-4 text-rakin-gray prose">Bienvenido a <br>Rakin-Tec</h1>
+          <p class="text-xl mb-8 text-rakin-gray prose">Soluciones innovadoras en Software y BigData</p>
+          <div>
+            <a href="#"
+              class="bg-rakin-orange text-white px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-300">Descubre
+              más</a>
+          </div>
+        </div>
+        <div class="w-full md:w-full mt-8 md:mt-0">
+          <img src="./assets/img.svg" alt="Imagen principal" class="w-full h-auto max-w-md mx-auto object-contain">
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="mx-auto py-16 h-100vh flex flex-col bg-white ">
+      <div class=" mx-auto px-6">
+        <h2 class="text-5xl font-bold mb-8 text-center text-rakin-gray">Nuestros Servicios</h2>
+        <div class="w-full flex md:flex-row flex-col gap-2 ">
+          <div class="bg-gray-100 p-6 rounded-lg w-full">
+            <div class="flex flex-row justify-center w-full">
+              <h3 class="text-3xl font-semibold text-rakin-orange">Eval Assist</h3>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center w-full">
+              <div class="flex flex-col w-full">
+                <p class="text-rakin-gray text-xl">Sistema dedicado a la gestión de procesos de evaluación. Este sistema se divide principalmente en tres modulos:</p>
+                <p class="text-rakin-gray font-bold text-xl">Planificación</p>
+                <p class="text-rakin-gray font-bold text-xl">Digitación</p>
+                <p class="text-rakin-gray font-bold text-xl">Analisis y Reporte</p>
+              </div>
+              <div class="flex flex-row items-center lg:justify-end md:justify-center w-full">
+                <img src="./assets/Tablet.png" class="w-4/6 mt-6" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg w-full">
+            <div class="flex flex-row justify-center w-full">
+              <h3 class="text-3xl font-semibold text-rakin-orange">Portal Cliente</h3>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center w-full">
+              <div class="flex flex-col w-full">
+                <p class="text-rakin-gray text-xl">Sistema dedicado a la gestión de procesos de evaluación. Este sistema se divide principalmente en tres modulos:</p>
+                <p class="text-rakin-gray font-bold text-xl">Planificación</p>
+                <p class="text-rakin-gray font-bold text-xl">Digitación</p>
+                <p class="text-rakin-gray font-bold text-xl">Analisis y Reporte</p>
+              </div>
+              <div class="flex flex-row items-center lg:justify-end md:justify-center w-full">
+                <img src="./assets/Mobile.png" class="w-2/6 mt-6" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex md:flex-row flex-col gap-2 mt-2">
+          <div class="bg-gray-100 p-6 rounded-lg w-full">
+            <div class="flex flex-row justify-center w-full">
+              <h3 class="text-3xl font-semibold text-rakin-orange">Sistema de Ticket</h3>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center w-full">
+              <div class="flex flex-col w-full">
+                <p class="text-rakin-gray text-xl">Sistema dedicado a la gestión de procesos de evaluación. Este sistema se divide principalmente en tres modulos:</p>
+                <p class="text-rakin-gray font-bold text-xl">Planificación</p>
+                <p class="text-rakin-gray font-bold text-xl">Digitación</p>
+                <p class="text-rakin-gray font-bold text-xl">Analisis y Reporte</p>
+              </div>
+              <div class="flex flex-row items-center lg:justify-end md:justify-center w-full">
+                <img src="./assets/Tablet.png" class="w-4/6 mt-6" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg w-full">
+            <div class="flex flex-row justify-center w-full">
+              <h3 class="text-3xl font-semibold text-rakin-orange">Dashboard Power Bi</h3>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center w-full">
+              <div class="flex flex-col w-full">
+                <p class="text-rakin-gray text-xl">Sistema dedicado a la gestión de procesos de evaluación. Este sistema se divide principalmente en tres modulos:</p>
+                <p class="text-rakin-gray font-bold text-xl">Planificación</p>
+                <p class="text-rakin-gray font-bold text-xl">Digitación</p>
+                <p class="text-rakin-gray font-bold text-xl">Analisis y Reporte</p>
+              </div>
+              <div class="flex flex-row items-center lg:justify-end md:justify-center w-full">
+                <img src="./assets/Notebook.png" class="w-5/6 mt-6" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-nosotros" class="mx-auto px-10 py-16 h-100vh bg-gray-100 rounded-[40px]">
+      <div class="text-center mb-12">
+        <h2 class="text-5xl md:text-5xl font-bold mb-4 text-rakin-gray">Nuestro equipo</h2>
+        <p class="text-lg md:text-xl text-rakin-gray">Presentamos el equipo de trabajo con el que cuenta Rakin-Tec</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 hover:scale-105 hover:bg-orange-100 active:scale-105 active:bg-orange-100">
+          <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+            <img src="./assets/137-min.JPG" alt="Boris Ramirez Gajardo" class="w-full object-contain" />
+          </div>
+          <h3 class="text-xl font-bold text-rakin-orange text-center">Boris Ramirez Gajardo</h3>
+          <h3 class="text-md font-semibold text-rakin-gray text-center">CEO</h3>
+        </div>
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 hover:scale-105 hover:bg-orange-100">
+          <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+            <img src="./assets/152-min.JPG" alt="Maximiliano Vera Espinola" class="w-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold text-rakin-orange text-center">Maximiliano Vera Espinola</h3>
+          <h3 class="text-md font-semibold text-rakin-gray text-center">Desarrollador Back-End</h3>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 hover:scale-105 hover:bg-orange-100">
+          <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+            <img src="./assets/Javier-min.jpg" alt="Javier Jeldes Otarola" class="w-full" />
+          </div>
+          <h3 class="text-xl font-bold text-rakin-orange text-center">Javier Jeldes Otarola</h3>
+          <h3 class="text-md font-semibold text-rakin-gray text-center">Analista Documentador</h3>
+        </div>
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 hover:scale-105 hover:bg-orange-100">
+          <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+            <img src="./assets/146-min.JPG" alt="Tomas Salas Arancibia" class="w-full" />
+          </div>
+          <h3 class="text-xl font-bold text-rakin-orange text-center">Tomas Salas Arancibia</h3>
+          <h3 class="text-md font-semibold text-rakin-gray text-center">Desarrollador Front-End</h3>
+        </div>
+        <div
+          class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 hover:scale-105 hover:bg-orange-100">
+          <div class="w-48 h-48 mb-4 overflow-hidden rounded-full">
+            <img src="./assets/ricardo.jpg" alt="Ricardo Espinoza Parra" class="w-full" />
+          </div>
+          <h3 class="text-xl font-bold text-rakin-orange text-center">Ricardo Espinoza Parra</h3>
+          <h3 class="text-md font-semibold text-rakin-gray text-center">Desarrollador Full-Stack</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="mx-auto px-6 h-screen flex flex-col bg-white justify-center rounded-[40px]">
+      <div class="container mx-auto px-6">
+        <div>
+          <h2 class="text-5xl font-bold mb-8 text-center text-rakin-gray">Contacto</h2>
+          <p class="text-xl text-rakin-gray text-center">¡Contáctanos para impulsar tu negocio!</p>
+        </div>
+        <form>
+          <div class="flex md:flex-row flex-col gap-6 mt-6">
+            <input required
+              class="shadow appearance-none border rounded w-full text-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="nombre" type="text" placeholder="Nombre">
+            <input required
+              class="shadow appearance-none border rounded w-full text-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="apellido" type="text" placeholder="Apellido">
+          </div>
+          <div class="flex flex-row gap-6 mt-6">
+            <input required
+              class="shadow appearance-none border rounded w-full text-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email" type="email" placeholder="Email">
+          </div>
+          <div class="flex flex-row gap-6 mt-6">
+            <textarea required
+              class="resize-none shadow appearance-none border rounded w-full text-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="mensaje" placeholder="Escribe tu mensaje aquí" rows="8"></textarea>
+          </div>
+          <div class="flex flex-row gap-8 mt-6">
+            <button type="submit"
+              class="bg-rakin-orange text-white px-6 py-3 rounded-lg hover:bg-opacity-80 transition duration-300">
+              Enviar Información </button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 text-white py-10 rounded-xl">
+    <div class="container mx-auto px-6 flex md:flex-row md:justify-around md:items-start flex-col ">
+      <div class="flex flex-col justify-start items-start md:mb-0 mb-8">
+        <img src="/assets/logo_rakin.png" alt="Rakin-Tec Logo" class="w-60 -mt-7">
+        <p class="text-md text-rakin-gray"> Compromiso con nuestros clientes </p>
+      </div>
+      <div class="flex flex-col justify-start items-start md:mb-0 mb-8">
+        <div class="flex flex-row gap-2">
+          <p class="text-md font-bold text-black mb-2"> Enlaces Rápidos </p>
+        </div>
+        <nav>
+          <ul class="flex flex-col gap-2 mt-2">
+            <a href="#inicio" class="text-rakin-gray text-sm nav-link hover:text-rakin-orange">Inicio</a>
+            <a href="#servicios" class="text-rakin-gray text-sm nav-link hover:text-rakin-orange">Servicios</a>
+            <a href="#sobre-nosotros" class="text-rakin-gray text-sm nav-link hover:text-rakin-orange">Sobre
+              Nosotros</a>
+            <a href="#contacto" class="text-rakin-gray text-sm nav-link hover:text-rakin-orange">Contacto</a>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex flex-col justify-start items-start md:mb-0 mb-8">
+        <div class="flex flex-row gap-2">
+          <p class="text-md font-bold text-black mb-2"> Contacto </p>
+        </div>
+        <div class="flex flex-col mt-2 items-start">
+          <a class="text-sm text-gray-700 mb-2 pointer hover:text-rakin-orange"
+            href="https://maps.app.goo.gl/iVMQ5VmMV6Zg73c28"> Tres Carrera #56 </a>
+          <p class="text-sm text-gray-700 mb-2 "> Los Andes </p>
+        </div>
+        <div class="flex flex-col mt-2 items-start">
+          <p class="text-sm text-gray-700 mb-2"> Horario de atención </p>
+          <p class="text-sm text-gray-700 mb-2"> Lunes - Viernes 08:30 AM - 18:30 PM </p>
+        </div>
+        <!-- <div class="flex flex-col mt-2 items-start">
+          <p class="text-sm text-gray-700 mb-2"> Fono Contacto </p>
+          <a class="text-sm text-gray-700 mb-2 hover:text-rakin-orange" href="tel:+56993016086"> +56993016086 </a>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
